@@ -2,10 +2,10 @@ server:
   port: 8081
 spring:
   application:
-    name: hmdp
+    name: goodoog
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.99.124.10:3306/hmdp?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://47.99.124.10:3306/goodoog?useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
   redis:
@@ -21,9 +21,9 @@ spring:
   jackson:
     default-property-inclusion: non_null # JSON处理时忽略非空字段
 mybatis-plus:
-  type-aliases-package: com.hmdp.entity # 别名扫描包
+  type-aliases-package: com.example.goodoog.entity # 别名扫描包
 logging:
   level:
-    com.hmdp: debug
+    com.example.goodoog: debug
   pattern:
     dateformat: mm:ss.SSS

@@ -9,7 +9,6 @@ import com.example.goodoog.strategy.LoginStrategy;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpSession;
-
 @Component
 public class EmialLoginStrategy extends ServiceImpl<UserMapper, User> implements LoginStrategy {
     @Override

@@ -3,6 +3,7 @@ package com.example.goodoog;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 /**
  *  过程 ：
  *      1、主要通过 @EnableAutoConfiguration ---> @Import  ----> 将{AutoConfigurationImportSelector.class}引入当前类

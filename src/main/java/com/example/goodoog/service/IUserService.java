@@ -9,4 +9,5 @@ import javax.servlet.http.HttpSession;
 
 public interface IUserService extends IService<User> {
 
+    R sendCode(String phone);
 }
