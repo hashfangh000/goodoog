@@ -1,4 +1,4 @@
-package com.example.goodoog.strategy.strategies;
+package com.example.goodoog.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
@@ -10,13 +10,12 @@ import com.example.goodoog.dto.R;
 import com.example.goodoog.dto.UserDTO;
 import com.example.goodoog.entity.User;
 import com.example.goodoog.mapper.UserMapper;
-import com.example.goodoog.strategy.LoginStrategy;
+import com.example.goodoog.service.LoginStrategyService;
 import com.example.goodoog.utils.RegexUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -32,8 +31,8 @@ import static com.example.goodoog.utils.SystemConstants.USER_NICK_NAME_PREFIX;
  * 验证码登陆
  */
 @Slf4j
-@Component
-public class CodeLoginStrategy extends ServiceImpl<UserMapper, User> implements LoginStrategy {
+@Service
+public class CodeLoginStrategyServiceImpl extends ServiceImpl<UserMapper, User> implements LoginStrategyService {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;

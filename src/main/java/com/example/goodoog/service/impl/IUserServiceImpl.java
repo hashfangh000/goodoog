@@ -7,25 +7,22 @@ import com.example.goodoog.dto.R;
 import com.example.goodoog.entity.User;
 import com.example.goodoog.mapper.UserMapper;
 import com.example.goodoog.service.IUserService;
-import com.example.goodoog.strategy.LoginStrategy;
-import com.example.goodoog.utils.MD5Util;
+import com.example.goodoog.service.LoginStrategyService;
 import com.example.goodoog.utils.RegexUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
-import org.springframework.util.DigestUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.concurrent.TimeUnit;
 
-import static com.example.goodoog.utils.MD5Util.inputToDB;
 import static com.example.goodoog.utils.RedisConstants.LOGIN_CODE_KEY;
 import static com.example.goodoog.utils.RedisConstants.LOGIN_CODE_TTL;
 
 @Service
 @Slf4j
-public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService, LoginStrategy{
+public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService, LoginStrategyService {
 
     @Resource
     private  StringRedisTemplate stringRedisTemplate;

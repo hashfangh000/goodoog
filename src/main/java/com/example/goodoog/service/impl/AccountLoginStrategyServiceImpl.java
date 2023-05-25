@@ -1,4 +1,4 @@
-package com.example.goodoog.strategy.strategies;
+package com.example.goodoog.service.impl;
 
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -6,20 +6,20 @@ import com.example.goodoog.dto.LoginDTO;
 import com.example.goodoog.dto.R;
 import com.example.goodoog.entity.User;
 import com.example.goodoog.mapper.UserMapper;
-import com.example.goodoog.strategy.LoginStrategy;
+import com.example.goodoog.service.LoginStrategyService;
 import com.example.goodoog.utils.MD5Util;
 import com.example.goodoog.utils.RegexUtils;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-@Component
-public class AccountLoginStrategy extends ServiceImpl<UserMapper, User> implements LoginStrategy {
+@Service
+public class AccountLoginStrategyServiceImpl extends ServiceImpl<UserMapper, User> implements LoginStrategyService {
 
     @Resource
-    private CodeLoginStrategy codeLoginStrategy;
+    private CodeLoginStrategyServiceImpl codeLoginStrategy;
 
     /**
      *
