@@ -22,16 +22,11 @@ import static com.example.goodoog.utils.RedisConstants.LOGIN_CODE_TTL;
 
 @Service
 @Slf4j
-public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService, LoginStrategyService {
+public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
     @Resource
     private  StringRedisTemplate stringRedisTemplate;
 
-
-    @Override
-    public R login(LoginDTO loginDTO, HttpSession session) {
-        return null;
-    }
 
     @Override
     public R sendCode(String phone) {
