@@ -1,5 +1,6 @@
 package com.example.goodoog.controller;
 
+import com.example.goodoog.annotation.Authenticated;
 import com.example.goodoog.dto.LoginDTO;
 import com.example.goodoog.dto.R;
 import com.example.goodoog.service.IUserService;
@@ -20,16 +21,8 @@ public class UserController {
     @Resource
     private Map<String, LoginStrategyService> loginStrategyMap;
 
-//    @Resource
-//    private CodeLoginStrategy codeLoginStrategy;
-//
-//    @Resource
-//    private AccountLoginStrategy accountLoginStrategy;
-//
-//    @Resource
-//    private EmialLoginStrategy emialLoginStrategy;
-
     @PostMapping("login")
+    @Authenticated(roles = {"admin", "user"})
     public R login(@RequestBody LoginDTO loginDTO, HttpSession session) {
         String method = loginDTO.getMethod();
         LoginStrategyService strategy = loginStrategyMap.get(method);
