@@ -5,17 +5,11 @@ import cn.hutool.core.util.StrUtil;
 import com.example.goodoog.annotation.Authenticated;
 import com.example.goodoog.dto.LoginDTO;
 import com.example.goodoog.dto.R;
-import com.example.goodoog.entity.User;
-import com.example.goodoog.service.IUserService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 @Component

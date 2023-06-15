@@ -2,19 +2,16 @@ package com.example.goodoog.service.impl;
 
 import cn.hutool.core.util.RandomUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.goodoog.dto.LoginDTO;
 import com.example.goodoog.dto.R;
 import com.example.goodoog.entity.User;
 import com.example.goodoog.mapper.UserMapper;
 import com.example.goodoog.service.IUserService;
-import com.example.goodoog.service.LoginStrategyService;
 import com.example.goodoog.utils.RegexUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 import java.util.concurrent.TimeUnit;
 
 import static com.example.goodoog.utils.RedisConstants.LOGIN_CODE_KEY;
