@@ -35,6 +35,4 @@ public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements I
         log.debug("发送短信验证码成功：{}，两分钟有效", code);
         return R.ok(200);
     }
-
-
 }

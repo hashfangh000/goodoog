@@ -8,4 +8,6 @@
     R login(LoginDTO loginDTO, HttpSession session);
   }
   ~~~
-  ![img.png](src/img.png)
+  ![img.png](img.png)
+- 自定义IOC容器，管理对象
+    
