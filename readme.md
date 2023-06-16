@@ -10,4 +10,6 @@
   ~~~
   ![img.png](img.png)
 - 自定义IOC容器，管理对象
+  - 工厂: BeanFactory
+  - 解析bean: BeanDefinitionReader, XmlBeanDefinitionReader
     
