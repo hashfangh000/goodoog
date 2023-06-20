@@ -26,7 +26,6 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
         // 加载beanDefinition对象
         beanDefinitionReader.loadBeanDefinitions(configLocation);
         // 初始化bean
-
     }
 
     // bean 初始化
