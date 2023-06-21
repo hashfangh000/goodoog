@@ -11,6 +11,9 @@ public class MenuItem extends MenuComponent{
     }
     @Override
     public void print() {
+        for (int i = 0; i < level; i++) {
+            System.out.print("--");
+        }
         System.out.println(name);
     }
 }
