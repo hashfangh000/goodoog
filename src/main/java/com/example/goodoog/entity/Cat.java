@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Cat {
     public Cat(){
-        System.out.println("cat被创建了...");
+//        System.out.println("cat被创建了...");
     }
 
     private String name;
@@ -16,7 +16,7 @@ public class Cat {
 
     @Value("${server.port}") //自动赋值功能
     public void setName(String name) {
-        System.out.println("cat....setName正在赋值调用....");
+//        System.out.println("cat....setName正在赋值调用....");
         this.name = name;
     }
 

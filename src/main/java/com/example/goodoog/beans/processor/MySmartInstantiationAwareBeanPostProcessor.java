@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Constructor;
 
-@Component
+
 public class MySmartInstantiationAwareBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {
     public MySmartInstantiationAwareBeanPostProcessor() {
         System.out.println("MySmartInstantiationAwareBeanPostProcessor....");
