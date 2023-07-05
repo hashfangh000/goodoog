@@ -18,10 +18,10 @@ public class LoginConfig {
     public Map<String, LoginStrategyService> loginStrategyMap(
             CodeLoginStrategyServiceImpl codeStrategy,
             AccountLoginStrategyServiceImpl accountLoginStrategy,
-            EmialLoginStrategyServiceImpl emialLoginStrategy){
+            EmialLoginStrategyServiceImpl emailLoginStrategy){
         Map<String, LoginStrategyService> loginStrategyMap = new HashMap<>();
         loginStrategyMap.put(LoginMethodEnum.CODE.getMethod(), codeStrategy);
-        loginStrategyMap.put(LoginMethodEnum.EMIAL.getMethod(), emialLoginStrategy);
+        loginStrategyMap.put(LoginMethodEnum.EMIAL.getMethod(), emailLoginStrategy);
         loginStrategyMap.put(LoginMethodEnum.ACCOUNT.getMethod(), accountLoginStrategy);
         return loginStrategyMap;
     }

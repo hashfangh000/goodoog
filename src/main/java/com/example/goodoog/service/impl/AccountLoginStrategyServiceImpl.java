@@ -6,10 +6,10 @@ import com.example.goodoog.dto.LoginDTO;
 import com.example.goodoog.dto.R;
 import com.example.goodoog.entity.User;
 import com.example.goodoog.mapper.UserMapper;
+import com.example.goodoog.service.IUserService;
 import com.example.goodoog.service.LoginStrategyService;
 import com.example.goodoog.utils.MD5Util;
 import com.example.goodoog.utils.RegexUtils;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
@@ -23,8 +23,9 @@ public class AccountLoginStrategyServiceImpl extends ServiceImpl<UserMapper, Use
 
     /**
      *
-     * @param loginDTO
-     * @return
+     * @param loginDTO 用户请求数据
+     * @param session session
+     * @return R
      */
     @Override
     public R login(LoginDTO loginDTO, HttpSession session) {

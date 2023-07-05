@@ -5,9 +5,7 @@ import com.example.goodoog.dto.R;
 import com.example.goodoog.entity.User;
 
 
-
 public interface IUserService extends IService<User> {
 
     R sendCode(String phone);
-
 }
