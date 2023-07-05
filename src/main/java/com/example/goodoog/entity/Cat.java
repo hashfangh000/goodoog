@@ -5,7 +5,6 @@ package com.example.goodoog.entity;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Cat {
     public Cat(){
 //        System.out.println("cat被创建了...");
