@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: goodoog
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.99.124.10:3306/goodoog?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  redis:
+    host: 47.99.124.10
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段

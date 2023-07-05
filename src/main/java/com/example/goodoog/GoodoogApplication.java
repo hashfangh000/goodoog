@@ -23,7 +23,7 @@ import org.springframework.context.annotation.ComponentScan;
  *      2、在new SpringApplication构造方法中：做了两个初始化操作：setInitializers(配置应用启动前的初始化对象) 和 setListeners(配置应用启动前的监听器)
  *      3、执行run方法 开始启动
  *      4、通知2设置的监听器，我要启动了哦
- *      5、创建应用环境，这一步读取配置文件(application.properties、application.yml)
+ *      5、创建应用环境，这一步读取配置文件(application.properties、application-dev.yml)
  *      6、创建应用程序上下文，这一步创建beanFactory
  *      7、刷新上下文(spring启动核心)
  *          7.1、配置工厂对象
